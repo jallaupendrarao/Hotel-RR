@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTEL RR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+  
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+<!-- font awesome symbols facilities -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> 
+
+<!-- //design Gallery// -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  
+</head>
+
+<body>
+
+    <!-- header  -->
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"><h1>🈴 ➡HOTEL RR</h1></a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
+          <li> <a href="#gallary" class="nav-link">Gallery</a> </li>
+          <li> <a href="contact.html" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- //js// -->
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+ 
+ <!-- home  -->
+  <section class="home" id="home">
+    <div class="head_container" id="home">
+      <div class="box">
+        <div class="text">
+          <h1 class="heading">Welcome to RR</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <button>BOOK NOW</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="https://media.istockphoto.com/photos/the-tranquil-night-and-beautiful-seascape-of-maldives-picture-id155380629?k=20&m=155380629&s=612x612&w=0&h=waZL-Xpbn717eJEgxZ5mrZNaC5VhePZfbtdGSc_M0YY=" class="slide">
+      </div>
+    </div>
+  </section>
+
+   <!-- //js// -->
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+
+  <!-- //scheduling// -->
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adults:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Children:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="SEARCH">
+      </div>
+    </div>
+  </section>
+
+  <!-- //about// -->
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="WhatsApp Image 2022-04-24 at 3.54.19 PM.jpeg" alt="">
+         
+         
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>Stay and Enjoy</h5>
+          <h2>About Hotel RR</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptatem debitis tenetur, dolore animi non consequuntur expedita possimus. Modi, similique? Minus soluta amet perferendis quam aperiam quod magni excepturi sunt laboriosam quos, temporibus, deserunt exercitationem.</p>
+          <button class="btn1">READ MORE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- //facilities// -->
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Take a business class room &
+        <br class="hidden lg:inline-block">enjoy this facilities for free
+      </h1>
+      <p class="mb-8 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quis pariatur labore culpa iusto id, nulla perferendis cum dolore facere provident deleniti debitis cumque magnam iure cupiditate quo in nostrum.</p>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming pool</span>
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yogo</span>
+            
+            <i class="fas fa-spa"></i>
+            <span>Spa & massage</span>
+            <i class="fas fa-ship"></i>
+            <span>Boat Tours</span>
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Private Beach</span>
+      <div class="flex justify-center">
+        <button class="btn1">READ MORE</button>
+      </div>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="image.1.jpg">
+    </div>
+  </div>
+</section> 
+
+  <!-- //rooms// -->
+  <section class="room top" id="rooms">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>Welcome To Our Luxury Rooms</h5>
+          <h2>Rooms</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aG90ZWwlMjByb29tc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+          <div class="text">
+            <h3>Rooms for family</h3>
+            <p>3999-₹<span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://images.unsplash.com/photo-1507038772120-7fff76f79d79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdGVsJTIwcm9vbXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+          </div>
+          <div class="text">
+            <h3>Double bed Rooms</h3>
+            <p>8999-₹<span>/per night</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="https://media.istockphoto.com/photos/luxury-hotel-room-picture-id184609057?k=20&m=184609057&s=612x612&w=0&h=XMklBWum5c-QueX2ypHYzepG8qqTKF7swxWk37Y_PqA=" alt="">
+          </div>
+          <div class="text">
+            <h3>For couples only</h3>
+            <p>5449-₹<span>/per night</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- //restaurant// -->
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="https://media.istockphoto.com/photos/interior-of-cozy-restaurant-loft-style-picture-id843610508?k=20&m=843610508&s=612x612&w=0&h=zDihg07dmPyyYPYtLUK-YGrZ2O-tPIMroNvN4DJfuc8=" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Our Restaurant</h2>
+          <p>The RR is First 7⭐ hotel , sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Our Chefs</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        
+        
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- //js// -->
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+<!-- //gallary// -->
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR RR GALLERY</h5>
+          <h2>Photo Gallery of Our Hotel RR</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW GALLERY of RR</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="https://media.istockphoto.com/photos/tanning-beds-beside-swimming-pool-in-tropical-resort-in-maldives-picture-id1159108633?k=20&m=1159108633&s=612x612&w=0&h=NS6AUXniYc1pufk2kUsFcr0LcdzXgsXM_euFfpmmh8Y=" alt="">
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1552768274-59c640872a75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxob3RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1589979481223-deb893043163?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA5fHxob3RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1569335468924-da9aa372cba5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTEwfHxob3RlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="item">
+          <img src="https://media.istockphoto.com/photos/honeymoon-couple-is-having-a-private-romantic-dinner-picture-id950698218?k=20&m=950698218&s=612x612&w=0&h=RsKFPhe1dPyMHLyKAW0mwmyXQKeRhkYyE8P3WzvUv1E=" alt="">
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1582533568805-78a15dcb01b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjB2aWV3fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVsJTIwdmlld3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="item">
+          <img src="https://images.unsplash.com/photo-1536625737227-92a1fc042e7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsJTIwdmlld3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- //js// -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+<!-- footer  -->
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+      
+        <h1>🈴 ➡HOTEL RR</h1>
+
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Recent News</h3>
+
+        <ul>
+          <li>Offer closes soon</li>
+          <li>Is something new?..</li>
+          <li>Unlimited drinks available from today onwards😛</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About RR</li>
+          <li>FAQ</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>Shivanand nagar, Raipur, Chhattisgarh 492001</li>
+          <li><i class="far fa-envelope"></i>example@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>548 526 1234 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+          <p class="footer_copyright">All rights reserved @xyz -🈴 ➡HOTEL RR 2022</p>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
